@@ -1,0 +1,23 @@
+### Register a New User
+POST http://localhost:5000/api/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123",
+  "name": "John Doe",
+  "gender": "Male"
+}
+
+### Login with the User
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "password123"
+}
+
+### Fetch Dashboard (Requires Token)
+GET http://localhost:5000/api/dashboard
+Authorization: Bearer YOUR_JWT_TOKEN
